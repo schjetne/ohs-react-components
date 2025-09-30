@@ -16,7 +16,6 @@ export const Primary: Story = {
   args: {
     children: "Primary Link",
     href: "#",
-    variant: "primary",
   },
 };
 
@@ -24,7 +23,6 @@ export const Secondary: Story = {
   args: {
     children: "Secondary Link",
     href: "#",
-    variant: "secondary",
   },
 };
 
