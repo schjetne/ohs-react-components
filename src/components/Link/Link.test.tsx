@@ -20,7 +20,6 @@ describe("Link", () => {
     const a = container.querySelector("a");
     expect(a).not.toBeNull();
     expect(a).toHaveTextContent("Wrapped");
-    // should have both link and btn classes
     expect(a).toHaveClass("ohs-link");
     expect(a).toHaveClass("ohs-btn");
   });

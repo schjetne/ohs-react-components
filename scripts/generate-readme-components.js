@@ -18,7 +18,6 @@ function listComponentNames() {
 
 function readComponentFile(componentName) {
   const dir = path.join(componentsDir, componentName);
-  // prefer <Component>.tsx or index.tsx
   const candidates = [
     path.join(dir, `${componentName}.tsx`),
     path.join(dir, "index.tsx"),
@@ -27,7 +26,6 @@ function readComponentFile(componentName) {
   for (const c of candidates) {
     if (fs.existsSync(c)) return fs.readFileSync(c, "utf8");
   }
-  // fallback: read all .tsx files in folder
   const files = fs
     .readdirSync(dir)
     .filter((f) => f.endsWith(".tsx") || f.endsWith(".ts"));

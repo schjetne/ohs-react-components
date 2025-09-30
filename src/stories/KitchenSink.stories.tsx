@@ -7,7 +7,6 @@ import type { IconName } from "../components/Icon/iconData";
 import { Heading } from "../components/Heading/Heading";
 import { ImageTile } from "../components/ImageTile/ImageTile";
 
-// A small helper layout used by the kitchen sink
 const Row: React.FC<{
   gap?: number;
   style?: React.CSSProperties;
@@ -41,7 +40,6 @@ const KitchenSink: React.FC<{
 
   React.useEffect(() => {
     let mounted = true;
-    // dynamically import iconData so the large generated file isn't bundled into this story chunk
     import("../components/Icon/iconData").then((mod) => {
       if (!mounted) return;
       const names = Object.keys(mod.solidIconData || {});
@@ -77,7 +75,6 @@ const KitchenSink: React.FC<{
               headingLevel="h4"
               icon={"warning" as IconName}
             />
-            {/* Demonstrate Button.asChild wrapping a Heading so button props/classes are applied to the heading element */}
             <div style={{ marginTop: 8 }}>
               <Button asChild noPadding>
                 <a href="#">
@@ -131,7 +128,6 @@ const meta: Meta<typeof KitchenSink> = {
   title: "KitchenSink",
   component: KitchenSink,
   parameters: {
-    // show full canvas so the layout feels like a testbed
     layout: "fullscreen",
   },
   tags: ["autodocs"],

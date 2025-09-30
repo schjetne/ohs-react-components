@@ -21,13 +21,11 @@ describe("Button", () => {
     const anchor = container.querySelector("a");
     expect(anchor).not.toBeNull();
     expect(anchor).toHaveTextContent("Link");
-    // The button class should be merged onto the anchor
     expect(anchor).toHaveClass("ohs-btn");
   });
 
   it("renders an icon when `icon` prop is provided", () => {
     render((<Button icon={"warning" as any}>With icon</Button>) as any);
-    // Icon renders an svg inside the button
     const svg = document.querySelector("button svg");
     expect(svg).not.toBeNull();
   });
@@ -44,9 +42,7 @@ describe("Button", () => {
     const anchor = container.querySelector("a");
     expect(anchor).not.toBeNull();
     expect(anchor).toHaveTextContent("Project Link");
-    // The button class should be merged onto the project Link
     expect(anchor).toHaveClass("ohs-btn");
-    // And it should still contain the Link's class
     expect(anchor).toHaveClass("ohs-link");
   });
 });

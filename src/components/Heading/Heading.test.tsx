@@ -15,7 +15,6 @@ describe("Heading", () => {
 
   it("renders the icon element", () => {
     render(<Heading title="With icon" icon="warning" />);
-    // the Icon renders an svg or element with role/presentation; assert by class wrapper
     expect(document.querySelector(".icon")).toBeTruthy();
   });
 

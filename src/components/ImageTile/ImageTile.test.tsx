@@ -18,7 +18,6 @@ describe("ImageTile", () => {
     expect(el).not.toBeNull();
     expect(el).toHaveClass("ohs-image-tile");
     expect(el).toHaveClass("landscape");
-    // backgroundImage should include the URL
     expect(el.style.backgroundImage).toContain(
       "outfit_1fdc259e-b96a-47f2-bbd8-e86e78d6df70_0.jpg"
     );

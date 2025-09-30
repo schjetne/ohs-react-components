@@ -27,7 +27,6 @@ const Icon: React.FC<IconProps> = ({
   color = "currentColor",
   style = {},
 }) => {
-  // Get the appropriate icon data based on variant
   const iconDataSource = variant === "normal" ? normalIconData : solidIconData;
   const pathData = iconDataSource[name];
 
