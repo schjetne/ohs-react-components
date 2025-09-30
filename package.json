@@ -1,0 +1,80 @@
+{
+  "name": "@ohshitman/ohs-react-components",
+  "version": "0.1.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Hitman themed React components by OhS",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "./dist/index.css"
+  ],
+  "scripts": {
+    "dev": "tsdown -w -c tsdown.config.ts",
+    "clean": "rimraf dist storybook-static dist/types",
+    "build:types": "tsc -p tsconfig.build.json --emitDeclarationOnly --outDir dist/types",
+    "generate:readme": "node ./scripts/generate-readme-components.js",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
+    "build": "npm run generate:readme && npm run build:types && tsdown -c tsdown.config.ts && node ./scripts/copy-types.js",
+    "release": "semantic-release",
+    "build:all": "npm run clean && npm run build && npm run build-storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "devDependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
+    "@rollup/plugin-typescript": "12.1.4",
+    "@rollup/plugin-url": "^8.0.2",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "13.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "11.0.6",
+    "@semantic-release/npm": "12.0.2",
+    "@semantic-release/release-notes-generator": "14.1.0",
+    "@storybook/addon-docs": "9.1.9",
+    "@storybook/react-vite": "9.1.9",
+    "@testing-library/jest-dom": "6.9.0",
+    "@testing-library/react": "16.3.0",
+    "@types/node": "24.6.0",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "@vitejs/plugin-react": "5.0.4",
+    "esbuild": "0.25.10",
+    "eslint": "9.36.0",
+    "jsdom": "27.0.0",
+    "postcss": "^8.5.6",
+    "postcss-url": "^10.1.3",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "rimraf": "6.0.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.93.2",
+    "sass-embedded": "^1.93.2",
+    "semantic-release": "24.2.9",
+    "storybook": "9.1.9",
+    "tsdown": "0.15.6",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  },
+  "dependencies": {
+    "inter-ui": "^4.1.1"
+  }
+}
