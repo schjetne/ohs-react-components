@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/schjetne/ohs-react-components/compare/v1.0.0...v1.0.1) (2025-09-30)
+
+
+### Bug Fixes
+
+* Remove debugging and test assets ([3bc54a3](https://github.com/schjetne/ohs-react-components/commit/3bc54a327af38f62f5195044a420e81aa660ba2e))
+
 # 1.0.0 (2025-09-30)
 
 
