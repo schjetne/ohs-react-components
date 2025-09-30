@@ -5,3 +5,5 @@ storybook-static/
 .vscode/
 coverage/
 .DS_Store
+.env
+.env.local
