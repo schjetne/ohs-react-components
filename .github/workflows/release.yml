@@ -28,11 +28,8 @@ jobs:
 
       - name: Configure npm auth
         run: |
-          # write .npmrc in the workspace so it's easy to inspect in CI artifacts if needed
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-          # show presence (not value) and run whoami to validate token
           echo "NPM token present: $( [ -z \"$NPM_TOKEN\" ] && echo no || echo yes )"
-          npm whoami || true
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -44,13 +41,6 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Verify .npmrc
-        run: |
-          echo ".npmrc exists: "
-          test -f .npmrc && echo yes || echo no
-          echo ".npmrc preview (token masked):"
-          sed -E 's/(_authToken=).*/\1[REDACTED]/' .npmrc || true
 
       - name: Semantic Release
         env:
