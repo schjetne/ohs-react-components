@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/schjetne/ohs-react-components/compare/v1.1.1...v1.1.2) (2025-10-01)
+
+
+### Bug Fixes
+
+* Support dual icons in Heading ([47944d8](https://github.com/schjetne/ohs-react-components/commit/47944d841302a8e3e60c08407e4b0580f3daaa5a))
+
 ## [1.1.1](https://github.com/schjetne/ohs-react-components/compare/v1.1.0...v1.1.1) (2025-10-01)
 
 
