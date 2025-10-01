@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/schjetne/ohs-react-components/compare/v1.1.4...v1.1.5) (2025-10-01)
+
+
+### Bug Fixes
+
+* Still trying to fix exports so they're not overwritten by semantic-release ([5409b1b](https://github.com/schjetne/ohs-react-components/commit/5409b1b1c52bcc207dd565f3d89ffd4ef94414cf))
+
 ## [1.1.4](https://github.com/schjetne/ohs-react-components/compare/v1.1.3...v1.1.4) (2025-10-01)
 
 

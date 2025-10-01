@@ -1,6 +1,6 @@
 {
   "name": "@ohshitman/ohs-react-components",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -14,7 +14,10 @@
   ],
   "exports": {
     ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./dist/index.css": "./dist/index.css",
+    "./styles.css": "./dist/index.css",
+    "./dist/*": "./dist/*"
   },
   "sideEffects": [
     "./dist/index.css"
