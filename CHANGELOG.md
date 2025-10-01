@@ -1,3 +1,12 @@
+## [1.1.6](https://github.com/schjetne/ohs-react-components/compare/v1.1.5...v1.1.6) (2025-10-01)
+
+
+### Bug Fixes
+
+* **package:** ensure exports include css and dist entries + add prepack hook ([d1333d4](https://github.com/schjetne/ohs-react-components/commit/d1333d4804fa8510a55c8f5b26dbe1c527b88a27))
+* **package:** restore CSS + dist exports ([4817872](https://github.com/schjetne/ohs-react-components/commit/48178722e539672880a285b8a8e1239602ae7b9f))
+* Remove ensure-exports.js ([c5631f7](https://github.com/schjetne/ohs-react-components/commit/c5631f79df49315be45829c89907dcafc41dcf5e))
+
 ## [1.1.5](https://github.com/schjetne/ohs-react-components/compare/v1.1.4...v1.1.5) (2025-10-01)
 
 
