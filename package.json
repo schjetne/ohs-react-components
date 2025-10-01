@@ -35,7 +35,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint src --ext .ts,.tsx",
-    "test": "vitest"
+    "test": "vitest",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\" \"scripts/**/*.{ts,js}\" README.md"
   },
   "peerDependencies": {
     "react": ">=19",
@@ -74,7 +75,8 @@
     "storybook": "9.1.9",
     "tsdown": "0.15.6",
     "typescript": "5.9.2",
-    "vitest": "3.2.4"
+    "vitest": "3.2.4",
+    "prettier": "^3.6.2"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",

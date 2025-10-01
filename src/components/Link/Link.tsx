@@ -1,18 +1,18 @@
-import React, { forwardRef } from "react";
-import { Slot, Slottable } from "@radix-ui/react-slot";
+import React, { forwardRef } from 'react'
+import { Slot, Slottable } from '@radix-ui/react-slot'
 
 type LinkBase = {
-  children?: React.ReactNode;
-  className?: string;
-  asChild?: boolean;
-};
+  children?: React.ReactNode
+  className?: string
+  asChild?: boolean
+}
 
-type LinkAsChild = LinkBase & { asChild: true };
+type LinkAsChild = LinkBase & { asChild: true }
 type LinkDefault = LinkBase & {
-  asChild?: false;
-} & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  asChild?: false
+} & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
-export type LinkProps = LinkAsChild | LinkDefault;
+export type LinkProps = LinkAsChild | LinkDefault
 
 /**
  * Link
@@ -28,29 +28,25 @@ export type LinkProps = LinkAsChild | LinkDefault;
  * </Link>
  */
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, className = "", asChild = false, ...rest }, ref) => {
-    const classes = `ohs-btn ohs-link ${className}`.trim();
+  ({ children, className = '', asChild = false, ...rest }, ref) => {
+    const classes = `ohs-btn ohs-link ${className}`.trim()
 
-    const Component: any = asChild ? Slot : "a";
+    const Component: any = asChild ? Slot : 'a'
 
     const componentProps: Record<string, any> = {
       className: classes,
       ref,
-    };
+    }
 
     return (
-      <Component
-        {...componentProps}
-        {...(asChild ? {} : rest)}
-        {...(asChild ? (rest as any) : {})}
-      >
+      <Component {...componentProps} {...(asChild ? {} : rest)} {...(asChild ? (rest as any) : {})}>
         <Slottable>{children}</Slottable>
       </Component>
-    );
+    )
   }
-);
+)
 
-export { Link };
+export { Link }
 
 /* istanbul ignore next */
-(Link as any).displayName = "Link";
+;(Link as any).displayName = 'Link'

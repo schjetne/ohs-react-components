@@ -1,4 +1,4 @@
-declare module "postcss-url" {
-  const plugin: any;
-  export default plugin;
+declare module 'postcss-url' {
+  const plugin: any
+  export default plugin
 }

@@ -1,15 +1,15 @@
-import React from "react";
-import { solidIconData, normalIconData, IconName } from "./iconData";
+import React from 'react'
+import { solidIconData, normalIconData, IconName } from './iconData'
 
 export interface IconProps {
-  name: IconName;
-  variant?: IconVariant;
-  className?: string;
-  color?: string;
-  style?: React.CSSProperties;
+  name: IconName
+  variant?: IconVariant
+  className?: string
+  color?: string
+  style?: React.CSSProperties
 }
 
-type IconVariant = "solid" | "normal";
+type IconVariant = 'solid' | 'normal'
 
 /**
  * Icon
@@ -22,17 +22,17 @@ type IconVariant = "solid" | "normal";
  */
 const Icon: React.FC<IconProps> = ({
   name,
-  variant = "solid",
-  className = "",
-  color = "currentColor",
+  variant = 'solid',
+  className = '',
+  color = 'currentColor',
   style = {},
 }) => {
-  const iconDataSource = variant === "normal" ? normalIconData : solidIconData;
-  const pathData = iconDataSource[name];
+  const iconDataSource = variant === 'normal' ? normalIconData : solidIconData
+  const pathData = iconDataSource[name]
 
   if (!pathData) {
-    console.warn(`Icon "${name}" not found in ${variant} variant`);
-    return null;
+    console.warn(`Icon "${name}" not found in ${variant} variant`)
+    return null
   }
 
   return (
@@ -42,18 +42,14 @@ const Icon: React.FC<IconProps> = ({
       role="presentation"
       className={`ohs-icon ${className}`}
       style={{
-        display: "inline-block",
-        verticalAlign: "middle",
+        display: 'inline-block',
+        verticalAlign: 'middle',
         ...style,
       }}
     >
-      <path
-        d={pathData}
-        fill={color}
-        transform="scale(1,-1) translate(0,-850)"
-      />
+      <path d={pathData} fill={color} transform="scale(1,-1) translate(0,-850)" />
     </svg>
-  );
-};
+  )
+}
 
-export { Icon };
+export { Icon }

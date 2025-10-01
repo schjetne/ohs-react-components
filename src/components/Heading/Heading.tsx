@@ -1,20 +1,20 @@
-import { createElement } from "react";
-import { Icon } from "../Icon/Icon";
-import { IconName } from "../Icon/iconData";
+import { createElement } from 'react'
+import { Icon } from '../Icon/Icon'
+import { IconName } from '../Icon/iconData'
 
 export interface HeadingProps {
-  prefix?: string | React.ReactNode;
-  title: string | React.ReactNode;
-  icon?: IconName;
-  secondIcon?: IconName;
-  iconStyle?: "solid" | "normal";
-  useBackground?: boolean;
-  usePadding?: boolean;
-  useUppercase?: boolean;
-  centered?: boolean;
-  headingLevel?: `h1` | `h2` | `h3` | `h4` | `h5` | `h6`;
-  size?: "small" | "medium" | "large";
-  className?: string;
+  prefix?: string | React.ReactNode
+  title: string | React.ReactNode
+  icon?: IconName
+  secondIcon?: IconName
+  iconStyle?: 'solid' | 'normal'
+  useBackground?: boolean
+  usePadding?: boolean
+  useUppercase?: boolean
+  centered?: boolean
+  headingLevel?: `h1` | `h2` | `h3` | `h4` | `h5` | `h6`
+  size?: 'small' | 'medium' | 'large'
+  className?: string
 }
 
 /**
@@ -31,29 +31,29 @@ export interface HeadingProps {
 const Heading: React.FC<HeadingProps> = ({
   prefix,
   title,
-  icon = "info",
+  icon = 'info',
   secondIcon,
-  iconStyle = "solid",
+  iconStyle = 'solid',
   useBackground = true,
   usePadding = true,
   useUppercase = true,
   centered = false,
   headingLevel = `h4`,
-  size = "medium",
-  className = "",
+  size = 'medium',
+  className = '',
 }) => {
-  const HeadingTag = headingLevel || "h4";
+  const HeadingTag = headingLevel || 'h4'
   const classes = [
-    "ohs-heading",
-    useBackground ? "ohs-heading--withBackground" : "",
-    usePadding ? "ohs-heading--withPadding" : "",
-    useUppercase ? "ohs-heading--uppercase" : "",
-    centered ? "ohs-heading--centered" : "",
+    'ohs-heading',
+    useBackground ? 'ohs-heading--withBackground' : '',
+    usePadding ? 'ohs-heading--withPadding' : '',
+    useUppercase ? 'ohs-heading--uppercase' : '',
+    centered ? 'ohs-heading--centered' : '',
     `ohs-heading--${size}`,
     className,
   ]
     .filter(Boolean)
-    .join(" ");
+    .join(' ')
 
   return (
     <div className={classes}>
@@ -67,10 +67,10 @@ const Heading: React.FC<HeadingProps> = ({
       )}
       <div className="content">
         {prefix && <span className="prefix">{prefix}</span>}
-        {createElement(HeadingTag, { className: "title" }, title)}
+        {createElement(HeadingTag, { className: 'title' }, title)}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export { Heading };
+export { Heading }

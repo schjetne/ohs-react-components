@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react'
 
 export type ImageTileProps = React.HTMLAttributes<HTMLDivElement> & {
-  imageUrl?: string;
-  aspect?: "square" | "half" | "landscape" | "portrait" | "full-size";
-  children?: React.ReactNode;
-  className?: string;
-  style?: React.CSSProperties;
-};
+  imageUrl?: string
+  aspect?: 'square' | 'half' | 'landscape' | 'portrait' | 'full-size'
+  children?: React.ReactNode
+  className?: string
+  style?: React.CSSProperties
+}
 
 /**
  * ImageTile
@@ -20,9 +20,9 @@ export type ImageTileProps = React.HTMLAttributes<HTMLDivElement> & {
  */
 export const ImageTile: React.FC<ImageTileProps> = ({
   imageUrl,
-  aspect = "landscape",
+  aspect = 'landscape',
   children,
-  className = "",
+  className = '',
   style,
   ...rest
 }) => {
@@ -37,5 +37,5 @@ export const ImageTile: React.FC<ImageTileProps> = ({
     >
       {children && <div className="tile-content">{children}</div>}
     </div>
-  );
-};
+  )
+}

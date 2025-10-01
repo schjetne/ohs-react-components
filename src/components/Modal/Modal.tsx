@@ -1,20 +1,20 @@
-import React from "react";
-import * as RadixDialog from "@radix-ui/react-dialog";
+import React from 'react'
+import * as RadixDialog from '@radix-ui/react-dialog'
 
 export type ModalProps = {
-  open?: boolean;
-  onOpenChange?: (open: boolean) => void;
-  title?: React.ReactNode;
-  description?: React.ReactNode;
-  children?: React.ReactNode;
-  id?: string;
-  className?: string;
-  overlayClassName?: string;
-  contentClassName?: string;
-  size?: "small" | "medium" | "large";
-  showCloseIcon?: boolean;
-  childBg?: boolean;
-};
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
+  title?: React.ReactNode
+  description?: React.ReactNode
+  children?: React.ReactNode
+  id?: string
+  className?: string
+  overlayClassName?: string
+  contentClassName?: string
+  size?: 'small' | 'medium' | 'large'
+  showCloseIcon?: boolean
+  childBg?: boolean
+}
 
 /**
  * Modal
@@ -41,10 +41,10 @@ export const Modal: React.FC<ModalProps> = ({
   description,
   id,
   children,
-  className = "",
-  overlayClassName = "",
-  contentClassName = "",
-  size = "medium",
+  className = '',
+  overlayClassName = '',
+  contentClassName = '',
+  size = 'medium',
   showCloseIcon = false,
   childBg = false,
 }) => {
@@ -55,44 +55,36 @@ export const Modal: React.FC<ModalProps> = ({
           className={`ohs-modal-overlay ${overlayClassName}`}
           onClick={() => {
             try {
-              onOpenChange && onOpenChange(false);
+              onOpenChange && onOpenChange(false)
             } catch (e) {
               /* ignore */
             }
           }}
         />
-        <RadixDialog.Content
-          className={`ohs-modal-content ${contentClassName}`}
-        >
+        <RadixDialog.Content className={`ohs-modal-content ${contentClassName}`}>
           <div
             className={`ohs-modal ${
-              childBg ? "ohs-modal--child-bg" : ""
+              childBg ? 'ohs-modal--child-bg' : ''
             } ohs-modal--${size} ${className}`}
           >
             {(title || showCloseIcon) && (
               <div className="ohs-modal-header">
                 {title && (
-                  <RadixDialog.Title className="ohs-modal-title">
-                    {title}
-                  </RadixDialog.Title>
+                  <RadixDialog.Title className="ohs-modal-title">{title}</RadixDialog.Title>
                 )}
                 {showCloseIcon && (
-                  <RadixDialog.Close className="ohs-modal-close">
-                    ×
-                  </RadixDialog.Close>
+                  <RadixDialog.Close className="ohs-modal-close">×</RadixDialog.Close>
                 )}
               </div>
             )}
 
-            {description && (
-              <RadixDialog.Description>{description}</RadixDialog.Description>
-            )}
+            {description && <RadixDialog.Description>{description}</RadixDialog.Description>}
             <div className="ohs-modal-body">{children}</div>
           </div>
         </RadixDialog.Content>
       </RadixDialog.Portal>
     </RadixDialog.Root>
-  );
-};
+  )
+}
 
-export { RadixDialog };
+export { RadixDialog }

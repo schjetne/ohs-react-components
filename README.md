@@ -15,8 +15,8 @@ yarn add @ohshitman/ohs-react-components
 ## Usage
 
 ```tsx
-import React from "react";
-import { Button, Link } from "@ohshitman/ohs-react-components";
+import React from 'react'
+import { Button, Link } from '@ohshitman/ohs-react-components'
 
 export default function App() {
   return (
@@ -25,33 +25,30 @@ export default function App() {
       <Link href="#">Learn more</Link>
       <Icon name="warning" />
     </div>
-  );
+  )
 }
 ```
 
 ## Styles
 
-Component styles are emitted to `dist/index.css`. Consumers can opt into the global stylesheet in a few ways:
+Component styles are emitted to `styles.css`. Consumers can opt into the global stylesheet in a few ways:
 
 - JavaScript import (will be processed by bundlers like Vite/webpack):
 
 ```js
-import "@ohshitman/ohs-react-components/styles.css";
+import '@ohshitman/ohs-react-components/styles.css'
 ```
 
 - CSS @import (in your app-level stylesheet):
 
 ```css
-@import "@ohshitman/ohs-react-components/dist/index.css";
+@import '@ohshitman/ohs-react-components/styles.css';
 ```
 
 - Classic HTML link (for static pages):
 
 ```html
-<link
-  rel="stylesheet"
-  href="/node_modules/@ohshitman/ohs-react-components/dist/index.css"
-/>
+<link rel="stylesheet" href="/node_modules/@ohshitman/ohs-react-components/styles.css" />
 ```
 
 Importing the package root (e.g. `import { Button } from "@ohshitman/ohs-react-components"`) will give you the JS components but will not automatically inject the stylesheet — import the stylesheet explicitly using one of the options above to get the global styles.
@@ -102,9 +99,8 @@ import { Icon } from '@ohshitman/ohs-react-components';
 A tile component that displays an image with an optional aspect ratio and content overlay.
 
 ```tsx
-import { ImageTile } from '@ohshitman/ohs-react-components';
-
-<ImageTile imageUrl="https://example.com/image.jpg" aspect="landscape">
+import { ImageTile } from '@ohshitman/ohs-react-components'
+;<ImageTile imageUrl="https://example.com/image.jpg" aspect="landscape">
   <div>Overlay Content</div>
 </ImageTile>
 ```
@@ -124,13 +120,13 @@ import { Link } from '@ohshitman/ohs-react-components';
 
 ### Modal
 
-* A composable modal component built on top of Radix Dialog.
+- A composable modal component built on top of Radix Dialog.
 
 ```tsx
-import { Modal } from '@ohshitman/ohs-react-components';
+import { Modal } from '@ohshitman/ohs-react-components'
 
-const [open, setOpen] = React.useState(false);
-<>
+const [open, setOpen] = React.useState(false)
+;<>
   <Button onClick={() => setOpen(true)}>Open modal</Button>
   <Modal open={open} onOpenChange={setOpen} title="Example">
     <div>Modal body</div>
