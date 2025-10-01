@@ -42,9 +42,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Ensure package exports
-        run: node ./scripts/ensure-exports.js
-
       - name: Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
