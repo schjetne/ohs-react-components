@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/schjetne/ohs-react-components/compare/v1.1.3...v1.1.4) (2025-10-01)
+
+
+### Bug Fixes
+
+* Resource expose ([07f836e](https://github.com/schjetne/ohs-react-components/commit/07f836ee0d535b5fd6551f7aabed7625410776f7))
+
 ## [1.1.3](https://github.com/schjetne/ohs-react-components/compare/v1.1.2...v1.1.3) (2025-10-01)
 
 
