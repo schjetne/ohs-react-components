@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/schjetne/ohs-react-components/compare/v1.0.1...v1.1.0) (2025-10-01)
+
+
+### Features
+
+* Added Modal, switched over to SASS, and changed a lot of CSS ([1d51b03](https://github.com/schjetne/ohs-react-components/commit/1d51b0309bfb69ad7a615d2db9b08235115d9a15))
+
 ## [1.0.1](https://github.com/schjetne/ohs-react-components/compare/v1.0.0...v1.0.1) (2025-09-30)
 
 
