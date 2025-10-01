@@ -3,7 +3,7 @@ import { Icon } from "../Icon/Icon";
 import { IconName } from "../Icon/iconData";
 
 export interface HeadingProps {
-  prefix?: string;
+  prefix?: string | React.ReactNode;
   title: string | React.ReactNode;
   icon?: IconName;
   iconStyle?: "solid" | "normal";
