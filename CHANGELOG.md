@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/schjetne/ohs-react-components/compare/v1.1.6...v1.1.7) (2025-10-01)
+
+
+### Bug Fixes
+
+* Remove semicolons and set prettier rules ([bafffca](https://github.com/schjetne/ohs-react-components/commit/bafffcaabb47620b802b81877c278022bcc0469e))
+
 ## [1.1.6](https://github.com/schjetne/ohs-react-components/compare/v1.1.5...v1.1.6) (2025-10-01)
 
 
