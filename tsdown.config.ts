@@ -7,7 +7,7 @@ import viteConfig from "./vite.config";
 
 const cfg: any = {
   dts: true,
-  exports: true,
+  exports: false,
   hash: false,
   entry: "src/index.ts",
   output: [
