@@ -122,5 +122,21 @@ import { Link } from '@ohshitman/ohs-react-components';
 </Link>
 ```
 
+### Modal
+
+* A composable modal component built on top of Radix Dialog.
+
+```tsx
+import { Modal } from '@ohshitman/ohs-react-components';
+
+const [open, setOpen] = React.useState(false);
+<>
+  <Button onClick={() => setOpen(true)}>Open modal</Button>
+  <Modal open={open} onOpenChange={setOpen} title="Example">
+    <div>Modal body</div>
+  </Modal>
+</>
+```
+
 <!-- COMPONENTS:END -->
 <!-- Note: To regenerate this list manually run `npm run generate:readme`. -->

@@ -39,7 +39,6 @@
     "react-dom": ">=19"
   },
   "devDependencies": {
-    "@radix-ui/react-slot": "^1.2.3",
     "@rollup/plugin-typescript": "12.1.4",
     "@rollup/plugin-url": "^8.0.2",
     "@semantic-release/changelog": "6.0.3",
@@ -75,6 +74,8 @@
     "vitest": "3.2.4"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-slot": "^1.2.3",
     "inter-ui": "^4.1.1"
   }
 }

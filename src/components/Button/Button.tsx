@@ -11,6 +11,9 @@ type ButtonBase = {
   icon?: IconName;
   iconVariant?: "solid" | "normal";
   noPadding?: boolean;
+  fullWidth?: boolean;
+  skin?: "transparent" | "solid" | "danger";
+  uppercase?: boolean;
   asChild?: boolean;
   title?: string;
 };
@@ -40,6 +43,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       disabled = false,
       currentChoice = false,
+      fullWidth = false,
+      skin = "transparent",
+      uppercase = false,
       className = "",
       icon,
       iconVariant = "solid",
@@ -51,15 +57,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const buttonClasses = `ohs-btn${
-      currentChoice ? " underlined" : ""
+      currentChoice ? " ohs-btn--underlined" : ""
     } ${className}`.trim();
 
     const Component: any = asChild ? Slot : "button";
 
     const componentProps: Record<string, any> = {
       className: `${buttonClasses} ${disabled ? "disabled" : ""} ${
-        noPadding ? "no-padding" : ""
-      }`.trim(),
+        noPadding ? "ohs-btn--noPadding" : ""
+      } ${fullWidth ? "ohs-btn--fullWidth" : ""} ${
+        skin && skin !== "transparent" ? `ohs-btn--skin-${skin}` : ""
+      } ${uppercase ? "ohs-btn--uppercase" : ""}`.trim(),
       title,
       style: disabled ? { pointerEvents: "none" } : undefined,
       onClick: (rest as any).onClick,

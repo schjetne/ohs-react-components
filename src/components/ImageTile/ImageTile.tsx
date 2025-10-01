@@ -28,7 +28,7 @@ export const ImageTile: React.FC<ImageTileProps> = ({
 }) => {
   return (
     <div
-      className={`ohs-image-tile ${aspect} ${className}`.trim()}
+      className={`ohs-image-tile ohs-image-tile--${aspect} ${className}`.trim()}
       style={{
         backgroundImage: imageUrl ? `url(${imageUrl})` : undefined,
         ...style,

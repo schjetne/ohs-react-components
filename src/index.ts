@@ -8,5 +8,7 @@ export { ImageTile } from "./components/ImageTile/ImageTile";
 export type { ImageTileProps } from "./components/ImageTile/ImageTile";
 export { Heading } from "./components/Heading/Heading";
 export type { HeadingProps } from "./components/Heading/Heading";
+export { Modal } from "./components/Modal/Modal";
+export type { ModalProps } from "./components/Modal/Modal";
 
 import "./entry-styles";

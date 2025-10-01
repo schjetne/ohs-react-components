@@ -43,11 +43,11 @@ const Heading: React.FC<HeadingProps> = ({
   const HeadingTag = headingLevel || "h4";
   const classes = [
     "ohs-heading",
-    useBackground ? "with-background" : "",
-    usePadding ? "with-padding" : "",
-    useUppercase ? "uppercase" : "",
-    centered ? "centered" : "",
-    `${size}`,
+    useBackground ? "ohs-heading--withBackground" : "",
+    usePadding ? "ohs-heading--withPadding" : "",
+    useUppercase ? "ohs-heading--uppercase" : "",
+    centered ? "ohs-heading--centered" : "",
+    `ohs-heading--${size}`,
     className,
   ]
     .filter(Boolean)
