@@ -6,6 +6,7 @@ export interface HeadingProps {
   prefix?: string | React.ReactNode;
   title: string | React.ReactNode;
   icon?: IconName;
+  secondIcon?: IconName;
   iconStyle?: "solid" | "normal";
   useBackground?: boolean;
   usePadding?: boolean;
@@ -31,6 +32,7 @@ const Heading: React.FC<HeadingProps> = ({
   prefix,
   title,
   icon = "info",
+  secondIcon,
   iconStyle = "solid",
   useBackground = true,
   usePadding = true,
@@ -58,6 +60,11 @@ const Heading: React.FC<HeadingProps> = ({
       <div className="icon">
         <Icon name={icon} variant={iconStyle} />
       </div>
+      {secondIcon && (
+        <div className="icon second-icon">
+          <Icon name={secondIcon} variant={iconStyle} />
+        </div>
+      )}
       <div className="content">
         {prefix && <span className="prefix">{prefix}</span>}
         {createElement(HeadingTag, { className: "title" }, title)}

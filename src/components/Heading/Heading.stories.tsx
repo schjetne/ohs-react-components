@@ -33,3 +33,13 @@ export const SmallCentered: Story = {
     centered: true,
   },
 };
+
+export const WithSecondIcon: Story = {
+  args: {
+    title: "Dual icon",
+    prefix: "02",
+    icon: "info",
+    secondIcon: "warning",
+    headingLevel: "h3",
+  },
+};
