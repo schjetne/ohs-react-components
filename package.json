@@ -29,7 +29,7 @@
     "generate:readme": "node ./scripts/generate-readme-components.js",
     "prepublishOnly": "npm run build",
     "prepare": "npm run build",
-    "build": "npm run generate:readme && npm run build:types && tsdown -c tsdown.config.ts && node ./scripts/copy-types.js",
+  "build": "npm run generate:readme && npm run build:types && tsdown -c tsdown.config.ts && node ./scripts/copy-types.js && node ./scripts/copy-fonts.js",
     "release": "semantic-release",
     "build:all": "npm run clean && npm run build && npm run build-storybook",
     "storybook": "storybook dev -p 6006",
